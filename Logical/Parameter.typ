@@ -59,6 +59,7 @@ TYPE
 		WarmluftofenTempVorgabe : {REDUND_UNREPLICABLE} BOOL;
 		Heizregister : {REDUND_UNREPLICABLE} BOOL;
 		HeizregisterDrehzahlvorgabe : {REDUND_UNREPLICABLE} BOOL;
+		HeizregisterFrostschutz : {REDUND_UNREPLICABLE} BOOL; (*Wenn TRUE, ist die Frostschutzueberwachung Heizregister aktiv*)
 		Scheitholzofen : {REDUND_UNREPLICABLE} BOOL;
 		Notstromaggregat : {REDUND_UNREPLICABLE} BOOL;
 		Energiemessung : {REDUND_UNREPLICABLE} BOOL;

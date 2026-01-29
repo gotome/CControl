@@ -397,6 +397,7 @@ TYPE
 		diEntfeuchterFremdInBetrieb : {REDUND_UNREPLICABLE} BOOL; (*Nur bei HB4000 in Verwendung*)
 		diEntfeuchterFremdStoerung : {REDUND_UNREPLICABLE} BOOL; (*Nur bei HB4000 in Verwendung*)
 		diTasteTrocknungPausieren : {REDUND_UNREPLICABLE} BOOL; (*Nur bei HB4000 in Verwendung*)
+		diHeizregisterFrostschutz : {REDUND_UNREPLICABLE} BOOL; (*Thermostat Heizregister Forstschutz  EIN*)
 	END_STRUCT;
 	typIoTestStatusIn : {REDUND_UNREPLICABLE} 	STRUCT 
 		diStatusNiederdruckMinMod1 : {REDUND_UNREPLICABLE} BOOL;

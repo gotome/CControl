@@ -212,3 +212,15 @@ Neu:
 ***********
 - Bugfix - Klappenansteuerung Anzugsverzoegerung fuer oeffnen und schliessen der Klappen eingebaut. Dient dazu das andere Relaise abfallen zu lassen bevor das andere geschaltet wird. Verhindert Doppelansteuerung.
 
+--------------------------------------------------------------------------------------------
+Version 2.1.4	     	new/change						2025.01.29					RIG
+--------------------------------------------------------------------------------------------
+
+Neu:
+****
+- Frostschutz Heizregister. Bei sehr kalten Temperaturen schaltet ein Thermostat einen Eingang. Ist dieser aktiv wird die 
+  Kuehlmittelzirkulation aktiviert. Das Heizregister und die verschauchung wird so gegen Frostschaeden gesichert.
+
+Änderungen:
+***********
+- Statuseingang Temperaturwaechter hinzugefuegt. Funktion Frostschutz an der HMI aktivier-/deaktiverbar machen.

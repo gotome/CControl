@@ -161,3 +161,6 @@
 000128,"doEntfFremdFreigabe                            ","Status DO Freigabe Entfeuchter Fremdgerät                  ","0/1                            ","              0","              1"
 000129,"diEntfeuchterFremdInBetrieb                    ","Status DI Betriebsmldg Entfeuchter Fremdgerät              ","0/1                            ","              0","              1"
 000130,"diEntfeuchterFremdStoerung                     ","Status DI Störmeldung Entfeuchter Fremdgerät               ","0/1                            ","              0","              1"
+000131,"diHeizregisterFrostschutz                      ","Thermostateingang Frostschutz Heizregister	             ","0/1                            ","              0","              1"
+
+

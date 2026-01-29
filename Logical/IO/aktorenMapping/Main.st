@@ -636,10 +636,18 @@ PROGRAM _CYCLIC
 		Aktoren.Heizregister.QuitFehler						:= hmiButtons.QuitFehler;
 		Aktoren.Heizregister.UmschaltverzWitterung			:= Betriebsparameter.Heizregister.VerzWetterwechsel;
 
-		//Ausgänge
-		doHeizregisterEin									:= Aktoren.Heizregister.FreigabeHeizregisterOut;
-		aoLeistungsvorgHeizregister							:= Aktoren.Heizregister.DrehzahlHeizregisterOut;
+		//Abfrage Frostschutz aktivieren
+		IF (Betriebsparameter.Ausstattung.HeizregisterFrostschutz AND diHeizregisterFrostschutz) THEN
+			//Frostschutz aktiv Heizregister Freigabe ein und volle Leistung
+			doHeizregisterEin									:= TRUE;
+			aoLeistungsvorgHeizregister							:= 100.0;
+		ELSE
+			//Ausgänge ansteuern im Normalbetrieb
+			doHeizregisterEin									:= Aktoren.Heizregister.FreigabeHeizregisterOut;
+			aoLeistungsvorgHeizregister							:= Aktoren.Heizregister.DrehzahlHeizregisterOut;		
+		END_IF
 		
+			
 		//HB4000/HB3000
 	ELSE
 		//Eingänge

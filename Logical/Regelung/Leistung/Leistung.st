@@ -383,7 +383,7 @@ PROGRAM _CYCLIC
 		PidKompressor2.Enable	:= Betriebsparameter.Kompressor2.DrehzahlregelungEin;
 		
 		//*** Regler Heizregister Eingänge ***
-		PidHeizregister.Enable	:= Betriebsparameter.Ausstattung.Heizregister;
+		PidHeizregister.Enable	:= Betriebsparameter.Ausstattung.Heizregister AND NOT (Betriebsparameter.Ausstattung.HeizregisterFrostschutz AND diHeizregisterFrostschutz);
 		
 		//*** Abluftregler Eingänge ***
 		PidAbluftregler.Enable	:= Betriebsparameter.Abluftventilator.Automatik;

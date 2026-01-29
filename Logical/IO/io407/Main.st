@@ -10,7 +10,6 @@ END_PROGRAM
 PROGRAM _CYCLIC
 	
 	//Bei Konfiguration 4.07 -> Text auf Login-Seite anpassen, Option Entfeuchter ausschalten
-
 	hmiParameter.Ausstattung.Entfeuchter := FALSE;
 	hmiParameter.Ausstattung.Bypassklappe := FALSE;
 	hmiParameter.Ausstattung.Box5 := FALSE;
@@ -21,7 +20,7 @@ PROGRAM _CYCLIC
 	ELSIF hmiParameter.Ausstattung.Abluftventilator THEN
 		hmiParameter.Ausstattung.Abluftklappe := FALSE;
 	END_IF
-	
+		
 	
 	//Zeitticks generieren
 	fbLascoZdxx_0(IN 	:= Echtzeit.Sekunde);
@@ -121,7 +120,7 @@ PROGRAM _CYCLIC
 		//*****************************************************************************************************************************************************
 		diWarmluftofenInBetrieb		:= cmModul05.di01; 
 		diScheitholzofenInBetrieb	:= cmModul05.di02; 
-		//Reserve					:= cmModul05.di03; 
+		diHeizregisterFrostschutz	:= cmModul05.di03; 
 		//Reserve					:= cmModul05.di04; 
 
 		cmModul05.do01				:= doWarmluftofenEin;
@@ -549,7 +548,7 @@ PROGRAM _CYCLIC
 		//*****************************************************************************************************************************************************
 		hmiIoTest.DigitalIn.diWarmluftofenInBetrieb		:= cmModul05.di01; 
 		hmiIoTest.DigitalIn.diScheitholzofenInBetrieb	:= cmModul05.di02; 
-		//Reserve										:= cmModul05.di03; 
+		hmiIoTest.DigitalIn.diHeizregisterFrostschutz	:= cmModul05.di03; 
 		//Reserve										:= cmModul05.di04; 
 
 		cmModul05.do01				:= hmiIoTest.DigitalOut.doWarmluftofenEin;

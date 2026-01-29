@@ -116,6 +116,7 @@ VAR
 	diLeistungsvorgKompressorExtMod1 : BOOL;
 	diBypassklappeGeschl : BOOL;
 	diBypassklappeOffen : BOOL;
+	diHeizregisterFrostschutz : BOOL;
 END_VAR
 (*Statuseingänge (DI) =====================================================================================================================================================*)
 VAR
