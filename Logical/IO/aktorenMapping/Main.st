@@ -637,12 +637,12 @@ PROGRAM _CYCLIC
 		Aktoren.Heizregister.UmschaltverzWitterung			:= Betriebsparameter.Heizregister.VerzWetterwechsel;
 
 		//Abfrage Frostschutz aktivieren
-		IF (Betriebsparameter.Ausstattung.HeizregisterFrostschutz AND diHeizregisterFrostschutz) THEN
+		IF (diHeizregisterFrostschutz) THEN
 			//Frostschutz aktiv Heizregister Freigabe ein und volle Leistung
 			doHeizregisterEin									:= TRUE;
 			aoLeistungsvorgHeizregister							:= 100.0;
 		ELSE
-			//Ausgänge ansteuern im Normalbetrieb
+			//Normalbetrieb - Ausgaenge von Regler uebernehmen
 			doHeizregisterEin									:= Aktoren.Heizregister.FreigabeHeizregisterOut;
 			aoLeistungsvorgHeizregister							:= Aktoren.Heizregister.DrehzahlHeizregisterOut;		
 		END_IF

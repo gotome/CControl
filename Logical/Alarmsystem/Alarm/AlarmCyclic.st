@@ -244,6 +244,9 @@ PROGRAM _CYCLIC
 		fbLascoFehl_28(FehlerIn := diStatusAustrittFeuchteMax OR diStatusAustrittFeuchteMin OR diStatusAustrittTempMax OR diStatusAustrittTempMin,
 		VerzZeit := Betriebsparameter.Allgemein.VerzoegerungFehler, Quit := hmiButtons.QuitFehler, Tick := sekTick, Mode := 1);
 		alarmWarnung[WARNUNG_SENSOR_AUSTRITT]	:= fbLascoFehl_28.FehlerOut;
+		
+		//03) Warnung Heizrregister Frostschutz aktiv
+		alarmWarnung[WARNUNG_HEIZREGISTER_FROSTSCHUTZ] := diHeizregisterFrostschutz;
 
 		
 		//==================================================================================================================================================================
