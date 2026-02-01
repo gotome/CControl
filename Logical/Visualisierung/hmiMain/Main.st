@@ -178,7 +178,7 @@ PROGRAM _CYCLIC
 
 	//Aktuell verwendetes Passwort in globale Variable (für CSV)
 	IF hmiStatus.hmiPasswort = PASSWORT_ADMIN THEN
-		gAktuellesPasswort	:= 110481;
+		gAktuellesPasswort	:= 110588;
 	ELSIF hmiStatus.hmiPasswort = PASSWORT_ADMIN_1 THEN
 		gAktuellesPasswort	:= 81190;
 	ELSIF hmiStatus.hmiPasswort = PASSWORT_KUNDE THEN
