@@ -225,3 +225,4 @@ Neu:
 ***********
 - Statuseingang Temperaturwaechter hinzugefuegt. Bei aktivem Eingang ist die Frostschutzlogik aktiv. 
 - Die Funktion ist nicht ueber die Visu aktivier/deaktivierbar, ist also immer aktiv wenn der Eingang aktiv ist 
+- Adminkennwort geaendert
